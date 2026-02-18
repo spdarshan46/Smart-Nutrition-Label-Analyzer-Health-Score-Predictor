@@ -1,4 +1,5 @@
 const Tesseract = require("tesseract.js");
+const FoodAnalysis = require("../models/FoodAnalysis");
 
 exports.extractText = async (req, res) => {
     try {
@@ -63,6 +64,12 @@ exports.extractText = async (req, res) => {
         } else if (score < 80) {
             level = "Moderate";
         }
+        // Save to database
+        await FoodAnalysis.create({
+            ...nutritionData,
+            score,
+            level
+        });
 
         // 🔥 FINAL RESPONSE
         res.json({
@@ -77,3 +84,4 @@ exports.extractText = async (req, res) => {
         res.status(500).json({ error: "OCR failed" });
     }
 };
+
