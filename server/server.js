@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ MongoDB Connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Atlas Connected"))
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log("DB Error:", err));
 
 app.use("/api/ocr", require("./routes/ocrRoutes"));
