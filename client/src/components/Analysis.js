@@ -14,6 +14,7 @@ const Analysis = () => {
   const [result, setResult] = useState(null);
   const { progress, analysisStage } = useSocket();
   const { user } = useAuth();
+  
 
   const onDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles[0];

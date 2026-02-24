@@ -1,0 +1,23 @@
+{
+  "name": "nutrition-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spdarshan46/Smart-Nutrition-Label-Analyzer-Health-Score-Predictor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/spdarshan46/Smart-Nutrition-Label-Analyzer-Health-Score-Predictor/issues"
+  },
+  "homepage": "https://github.com/spdarshan46/Smart-Nutrition-Label-Analyzer-Health-Score-Predictor#readme"
+}
